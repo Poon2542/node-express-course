@@ -12,11 +12,10 @@ const connectDB = (url) => {
         useFindAndModify : false,
         useUnifiedTopology : true
     })
-
 }
 module.exports = connectDB;
-
-/*mongoose
+/*
+mongoose
     .connect(connetionString,{ //delete dumb warning
         useNewUrlParser : true,
         useCreateIndex : true,

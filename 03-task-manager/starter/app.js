@@ -31,10 +31,12 @@ app.use
 //api.patch('/api/v1/tasks/:id')    - update task
 //api.delete('/api/v1/tasks/:id')   - delete task
 
+const connetionString = "mongodb+srv://sereepsm:S2511utisa@clusterzero.poi99tk.mongodb.net/?retryWrites=true&w=majority"
 
 const start = async () =>{
     try{
-        await connectDB(process.env.MONGO_URI);
+        //await connectDB(process.env.MONGO_URI);
+        await connectDB(connetionString)
         app.listen(port,console.log(`server is listening on port ${port}...`))
     }catch (error){
         console.log(error);
